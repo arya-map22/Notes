@@ -602,7 +602,7 @@ contoh graph ilustrasi Network Structure 5 :
   - Waktu yang dibutuhkan data untuk sampai menuju **router B** setelah keluar dari **router A.**
   - $f$ dari jarak yang ditempuh oleh data.
 
-- $Dnodal = Dproc + Dqueque + Dtrans + Dprop$
+- $D_{nodal} = D_{proc} + D_{queue} + D_{trans} + D_{prop}$
 	*\*) Pengaruh dari delay-delay ini sangat bervariasi*
 
 ### 1.4.2 : Queuing Delay and Packet Loss
@@ -628,7 +628,7 @@ contoh graph ilustrasi Network Structure 5 :
 
 ### 1.4.3 : End-to-End Delay
 
-- $Dend-end = N(Dproc+Dqueue+Dtrans+Dprop)$
+- $D_{end-end} = N(D_{proc}+D_{queue}+D_{trans}+_{Dprop})$
   *\*) Data melewati N-1 **router** dalam perjalanannya*
 
 #### Traceroute
