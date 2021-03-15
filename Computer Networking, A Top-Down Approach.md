@@ -77,6 +77,12 @@
 			- [Physiscal Layer](#physiscal-layer)
 		- [1.5.2 : Encapsulation](#152--encapsulation)
 	- [1.6 : Networks Under Attack](#16--networks-under-attack)
+		- [Hal-hal yang mungkin dilakukan oleh penjahat cyber di dalam internet :](#hal-hal-yang-mungkin-dilakukan-oleh-penjahat-cyber-di-dalam-internet-)
+			- [The Bad Guys Can Put Malware into Your Host Via the Internet](#the-bad-guys-can-put-malware-into-your-host-via-the-internet)
+			- [The Bad Guys Can Attack Servers and Network Infrastructure](#the-bad-guys-can-attack-servers-and-network-infrastructure)
+			- [The Bad Guys Can Sniff Packets](#the-bad-guys-can-sniff-packets)
+			- [The Bad Guys Can Masquerade as Someone You Trust](#the-bad-guys-can-masquerade-as-someone-you-trust)
+	- [1.7 : History of Computer Networking and the Internet](#17--history-of-computer-networking-and-the-internet)
 
 ---
 
@@ -797,3 +803,60 @@ Layanan tersebut dilakukan dengan :
 Contohnya data yang sangat besar bisa dibagi-bagi menjadi beberapa **segment** yang nanti juga akan dibagi-bagi menjadi beberapa **datagram** yang pada akhirnya harus dirakit menjadi data awalnya di **end system** tujuan.
 
 ## 1.6 : Networks Under Attack
+
+- Sekarang ini, internet menjadi suatu kebutuhan khusus bagi banyak orang. Individu, perusahaan, pemerintahan memanfaatkan jaringan internet untuk bertukar data / informasi.
+
+- Namun ada pula pihak yang ingin melakukan hal buruk dengan memanfaatkan internet.
+
+- **Network security** adalah sebuah ilmu yang berkembang untuk mencegah hal-hal buruk terjadi di internet. Ilmu ini mempelajari tentang bagaimana seorang "penjahat" menyerang jaringan, cara bertahan terhadap serangan tersebut, dan mendesain arsitektur jaringan yang kebal terhadap serangan cyber.
+
+### Hal-hal yang mungkin dilakukan oleh penjahat cyber di dalam internet :
+
+#### The Bad Guys Can Put Malware into Your Host Via the Internet
+- Internet adalah tempat di mana orang-orang akan saling bertukar informasi.
+
+- Seorang penjahat cyber dapat memanipulasi data dengan menambahkan **malware** yang berpotensi merusak komputer / gadget dari korbannya.
+
+- **Malware** mampu menghapus data-data penting, dan mampu menginstall **spyware** yang dapat mengoleksi data-data pribadi korban dan mengirimkannya kembali ke pelaku.
+
+- **Malware** saat ini dilengkapi dengan kemampuan **self-replicating**, yaitu mampu menginfeksi **host** lain dan seterusnya. Kemampuan ini menyebabkan **malware** dapat menyebar secara eksponensial.
+
+#### The Bad Guys Can Attack Servers and Network Infrastructure
+- Sebuah serangan yang sangat terkenal adalah **Denial-of-Service (DoS)** yang targetnya biasanya adalah server.
+
+- **DoS** terbagi menjadi 3 kategori :
+  - *Vulnerability attack* : pelaku mengirimkan suatu data yang telah direkayasa sedemikian rupa untuk melumpuhkan layanan pada **host** korbannya.
+  - *Bandwidth flooding* : pelaku membanjiri **host** korban dengan data, mengakibatkan **link** pada **host** korban mengalami kemacetan sehingga tidak mampu menerima data yang seharusnya diterima.
+  - *Connection flooding* : pelaku membanjiri **host** korban dengan koneksi **TCP**, sehingga **host** korban menolak koneksi yang seharusnya diterima.
+
+- Untuk melakukan serangan ini, pelaku harus mampu mengirimkan data dengan rasio *R bps* (dengan asumsi **host** korban memiliki akses *R bps*).
+
+- Semakin besar *R* maka pelaku akan kesulitan untuk melakukan serangan secara individu.
+
+- **Distributed DoS (DDoS)** adalah serangan **DoS** dimana pelaku mengendalikan banyak **host** untuk mengirimkan data kepada **host** korbannya.
+
+- **DDoS** adalah serangan yang paling sering terjadi sekarang ini, dan paling sulit dideteksi dan dilawan.
+
+#### The Bad Guys Can Sniff Packets
+- Mayoritas orang saat ini mengakses internet secara *wireless*.
+
+- Seorang penjahat cyber dapat meletakkan suatu alat penerima pasif yang disebut **packet sniffer** di area sekitar **modem WiFi** untuk menduplikasi setiap data yang dikirimkan oleh modem.
+
+- Data yang didapatkan oleh pelaku akan dianalisa untuk mendapatkan informasi berharga.
+
+- Tidak hanya pada *Wireless*, **packet sniffer** juga bisa berfungsi di jaringan internet yang menggunakan kabel (**Ethernet LAN**, dll).
+
+- Karena sifatnya yang pasif, **packet sniffer** sangat sulit dideteksi.
+
+- Salah satu cara pencegahan dari serangan ini melibatkan kriptografi.
+
+#### The Bad Guys Can Masquerade as Someone You Trust
+- Seorang penjahat cyber juga mampu menyamar menjadi orang lain dengan metode **IP spoofing**, yaitu mengirimkan data dengan alamat asal yang palsu.
+
+- Untuk mencegah hal ini, diperlukan adanya *end-to-end authentication*, yaitu suatu cara untuk memastikan bahwa data yang kita terima dikirimkan dari pengirim yang seharusnya.
+
+- Internet dapat menjadi tempat yang tidak aman karena internet mulanya didesain *agar beberapa orang dapat berkomunikasi secara transparan*, sehingga tidak diperlukan keamanan.
+
+- Untungnya internet saat ini tidak lagi menggunakan desain awalnya, tetapi tetap memungkinkan bagi kedua pihak yang tidak saling kenal untuk berkomunikasi.
+
+## 1.7 : History of Computer Networking and the Internet
