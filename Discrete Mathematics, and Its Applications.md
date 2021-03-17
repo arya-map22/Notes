@@ -31,6 +31,14 @@
     - [1.1.4 : Truth Tables of Compound Propositions](#114--truth-tables-of-compound-propositions)
     - [1.1.5 : Precedence of Logical Operators](#115--precedence-of-logical-operators)
     - [1.1.6 : Logic and Bit Operations](#116--logic-and-bit-operations)
+  - [1.2 : Applications of Propositional Logic](#12--applications-of-propositional-logic)
+    - [1.2.1 : Introduction](#121--introduction)
+    - [1.2.2 : Translating English Sentences](#122--translating-english-sentences)
+    - [1.2.3 : System Specifications](#123--system-specifications)
+    - [1.2.4 : Boolean Searches](#124--boolean-searches)
+    - [1.2.5 : Logic Puzzles](#125--logic-puzzles)
+    - [1.2.6 : Logic Circuits](#126--logic-circuits)
+  - [1.3 : Propositional Equivalences](#13--propositional-equivalences)
 
 ---
 
@@ -285,3 +293,102 @@ Contohnya ketika seseorang berkata "jika kamu lolos dari SMA/SMK, maka kamu bisa
   - $s_1$ **bitwise OR** $s_2$ = 1101 1111 1101 1111
   - $s_1$ **bitwise XOR** $s_2$ = 1100 0011 1101 1111
   \*) *Bisa dilihat di sini bahwa operasi bitwise sama dengan menerapkan operasi logika pada setiap bit dalam string*
+
+## 1.2 : Applications of Propositional Logic
+
+### 1.2.1 : Introduction
+
+- Banyak bidang yang menerapkan aturan logika, contohnya matematika, ilmu komputer, dll.
+
+- Kegunaan logika dalam bidang-bidang tersebut adalah untuk menerjemahkan sebuah pernyataan yang ambigu menjadi pernyataan yang jelas dan untuk menentukan nilai kebenaran dari pernyataan tersebut.
+
+### 1.2.2 : Translating English Sentences
+
+- Bahasa yang kita gunakan sehari-hari cenderung ambigu dan tidak jelas. Untuk menghilangkan keambiguannya, maka perlu diterjemahkan menjadi sebuah proposisi majemuk.
+
+- Setelah diterjemahkan menjadi proposisi majemuk, kita dapat menganalisa nilai kebenarannya.
+
+- Contoh :
+  "***Kita dapat berjalan ketika kita berumur 1 tahun atau lebih***". 
+  Misalkan $p$ = "kita dapat berjalan", $q$ = "kita berumur 1 tahun", $r$ = "kita berumur lebih dari 1 tahun".
+  Maka kalimat di atas setara dengan proposisi :
+  **$(q \lor r) \implies p$**
+
+### 1.2.3 : System Specifications
+
+- Aturan logika juga berperan penting untuk menerjemahkan spesifikasi yang dikehendaki untuk membuat suatu sistem / aplikasi.
+
+- Spesifikasi tersebut tidak boleh ambigu dan harus konsisten karena akan menjadi fondasi pembuatan sistem tersebut, dan menentukan berhasil tidaknya sistem tersebut.
+
+- Contoh spesifikasi yang konsisten :
+  - "Data disimpan di HDD atau external drive",
+  - "Data tidak disimpan di external drive",
+  - "Jika data disimpan di external drive, maka data tidak disimpan di HDD".
+  
+  Misal $p$ = "Data disimpan di HDD" dan $q$ = "Data disimpan di external drive".
+  Maka spesifikasi di atas =
+  **$p \lor q, \neg q, q \implies \neg p$**
+  \*) *Agar semua spesifikasi bernilai benar maka $p$ harus bernilai benar dan $q$ harus bernilai salah.*
+
+- Contoh spesifikasi yang tidak konsisten :
+  - "Data disimpan di HDD atau external drive",
+  - "Data tidak disimpan di external drive",
+  - "Jika data disimpan di external drive, maka data tidak disimpan di HDD",
+  - "Data tidak disimpan di HDD".
+  
+  Spesifikasi di atas =
+  **$p \lor q, \neg q, q \implies \neg p, \neg p$**
+  \*) *Perhatikan bahwa tidak ada kombinasi nilai $p$ dan $q$ yang dapat membuat semua spesifikasi tersebut bernilai benar.*
+
+### 1.2.4 : Boolean Searches
+
+- Aturan logika juga digunakan di dalam mesin pencarian (seperti google, yahoo, bing, dll).
+
+- Kegunaannya adalah untuk mencocokkan informasi yang diminta dengan kumpulan informasi yang tersedia.
+  - **AND** : mencocokkan keduanya
+  - **OR** : mencocokkan salah satu atau keduanya
+  - **NOT / AND NOT** : mengecualikan
+
+- Contoh :
+  - Untuk mencari informasi tentang "*pariwisata di bali*" :
+  "*pariwisata* **AND** *bali*"
+  - Untuk mencari informasi tentang  "*pariwisata selain pantai di bali dan di lombok*" :
+  "*pariwisata* **AND** (*bali* **AND** *lombok*) **AND NOT** *pantai*"
+  - Dsb
+
+### 1.2.5 : Logic Puzzles
+
+- Puzzle logika adalah jenis puzzle yang bisa dipecahkan menggunakan aturan logika.
+
+- Menyelesaikan puzzle logika adalah salah satu cara terbaik untuk memahami aturan logika.
+
+- Contoh puzzle logika :
+  Ada 3 kotak yang tepat satu di antaranya berisikan harta karun. Di ketiga kotak terdapat suatu label bertuliskan : 
+    - kotak 1 dan kotak 2 = "kotak ini kosong"
+    - Kotak 3 = "harta karun ada di kotak 2"
+  
+  Hanya 1 label yang benar dan yang lainnya salah, kotak manakah yang berisi harta karun?
+
+  Misalkan $p_i$ mewakili label = "harta karun ada di kotak ke $i$".
+  $\therefore$ Maka semua kemunggkinannya adalah :
+  **$(\neg p_1 \land \neg(\neg p_2) \land \neg p_2) \lor (\neg(\neg p_1) \land \neg p_2 \land \neg p_2) \lor (\neg(\neg p_1) \land \neg(\neg p_2) \land p_2)$**
+
+  $\therefore$ Menggunakan aturan logika persamaan di atas =
+  $(p_1 \land \neg p_2) \lor (p_1 \land p_2)$........(1)
+  $\therefore$ Menggunakan aturan distribusi (1) =
+  $p_1 \land (\neg p_2 \lor p_2)$....................(2)
+  $\therefore$ Di mana $\neg p_2 \lor p_2$ = T
+  $\therefore$ Maka $p_1 \land$ T = $p_1$
+  $\therefore$ Kesimpulannya $\implies$ harta karun ada di kotak nomor 1 $\blacksquare$
+
+### 1.2.6 : Logic Circuits
+
+- Aturan logika dapat juga diterapkan pada sirkuit digital, di mana setiap sinyal *ON* = **T** dan *OFF* = **F**.
+
+- Setiap sinyal input yang masuk pada sirkuit akan dihasilkan sinyal output yang sesuai dengan sirkuit yang dimasukinya.
+  - Sirkuit **AND** = **T** jika keduanya **T**
+  - Sirkuit **OR** = **T** jika salah satunya **T**
+  - Sirkuit **NOT** = **T** jika sinyalnya **F**, dan sebaliknya
+  \*) *Sirkuit digital yang rumit dapat dibentuk dengan 3 sirkuit dasar di atas*
+
+## 1.3 : Propositional Equivalences
