@@ -83,6 +83,11 @@
 			- [The Bad Guys Can Sniff Packets](#the-bad-guys-can-sniff-packets)
 			- [The Bad Guys Can Masquerade as Someone You Trust](#the-bad-guys-can-masquerade-as-someone-you-trust)
 	- [1.7 : History of Computer Networking and the Internet](#17--history-of-computer-networking-and-the-internet)
+		- [1.7.1 : The Development of Packet Switching: 1961–1972](#171--the-development-of-packet-switching-19611972)
+		- [1.7.2 : Proprietary Networks and Internetworking: 1972–1980](#172--proprietary-networks-and-internetworking-19721980)
+		- [1.7.3 : A Proliferation of Networks: 1980–1990](#173--a-proliferation-of-networks-19801990)
+		- [1.7.4 : The Internet Explosion: The 1990s](#174--the-internet-explosion-the-1990s)
+		- [1.7.5 : The New Millennium](#175--the-new-millennium)
 
 ---
 
@@ -860,3 +865,103 @@ Contohnya data yang sangat besar bisa dibagi-bagi menjadi beberapa **segment** y
 - Untungnya internet saat ini tidak lagi menggunakan desain awalnya, tetapi tetap memungkinkan bagi kedua pihak yang tidak saling kenal untuk berkomunikasi.
 
 ## 1.7 : History of Computer Networking and the Internet
+
+### 1.7.1 : The Development of Packet Switching: 1961–1972
+
+- Internet pertama kali dikembangkan pada tahun 1960an, ketika jaringan telepon sedang mendominasi.
+
+- Seiring dengan bertambah pentingnya komputer, maka diperlukan suatu cara untuk menghubungkan banyak komputer sehingga dapat digunakan untuk bertransaksi data / informasi.
+
+- Karena jaringan telepon menggunakan **circuit-switching**, yang mana memiliki kelemahan ketika sumber daya yang telah dialokasikan dan tidak digunakan akan menjadi sia-sia, muncullah **packet-switching** sebagai alternatifnya.
+
+- Ada 3 kelompok pengembang **packet-switching** :
+  - Leonard Kleinrock (1961)
+  - Paul Baran (1964)
+  - Donald Davies dan Roger Scantlebury (1964)
+
+- J.C.R. Licklider dan Lawrence Roberts, keduanya adalah kolega dari Leonard Kleinrock menciptakan jaringan komputer **packet-switched** pertama yaitu **ARPAnet.**
+
+- 4 **nodes** pertama **ARPAnet** (1969) :
+  - UCLA
+  - Stanford Research Institute (SRI)
+  - UC Santa Barbara
+  - University of Utah
+	\*) *Percobaan pertama penggunaan **ARPAnet** gagal*
+
+- Pada tahun 1972, **ARPAnet** berkembang menjadi 15 **nodes**. Dan telah didemonstrasikan kepada publik oleh Robert Kahn.
+
+- Protokol **end-to-end** pertama adalah **Network-Control-Protocol (NCP).** Dengan adanya protokol ini memungkinkan aplikasi untuk dijalankan.
+
+- Program e-mail pertama kali ditulis oleh Ray Tomlinson pada 1972.
+
+### 1.7.2 : Proprietary Networks and Internetworking: 1972–1980
+
+- **ARPAnet** mengharuskan setiap **host** untuk terhubung dengan **ARPAnet Internet Message Processor (IMP)** agar bisa berkomunikasi dengan **host** yang terhubung pada **ARPAnet.**
+
+- Pada pertengahan tahun 1970an muncul beberapa jaringan **packet-switching** selain **ARPAnet** :
+  - **ALOHAnet**
+  - **DARPA**
+  - **Telenet**
+  - **Cylades**
+  - **Time-sharing Networks**
+  - **IBM's SNA**
+
+- Banyaknya jaringan komputer yang tersedia memunculkan sebuah gagasan untuk membuat arsitektur untuk menghubungkan berbagai jaringan menjadi satu.
+
+- Pembuatan arsitektur *jaringan dari jaringan* diprakarsai pertama kali oleh Vinton Cerf dan Robert Kahn.
+
+- Arsitektur ini terkandung dalam **TCP.**
+
+- Protokol **TCP, UDP, IP** adalah 3 protokol utama dalam internet sekarang ini sudah dikembangkan pada tahun 1970.
+
+- **ALOHAnet**, jaringan berbasis radio, dikembangkan oleh Norman Abramson di Hawaii. Protokol **ALOHA** adalah protokol multi-akses pertama.
+
+- Metcalfe dan Boggs mengembangkan protokol **Ethernet** (untuk jaringan berbasis kabel) dari protokol multi-akses milik Abramson. Protokol ini menjadi fondasi dari **Local Area Network (LAN)** saat ini.
+
+### 1.7.3 : A Proliferation of Networks: 1980–1990
+
+- Pada akhir 1970an hampir 200 **host** telah tersambung dalam internet, dan diperkirakan pada akhir 1980an ada ratusan ribu lagi.
+
+- Pertumbuhan pesat ini disebabkan oleh banyaknya usaha untuk menghubungkan komputer-komputer antar universitas.
+Salah satunya :
+	- **BITNET** : menyediakan layanan e-mail
+	- **CSNET** : menghubungkan komputer-komputer antar universitas yang tidak memiliki akses ke **ARPAnet**
+	- **NSFNET** : menyediakan akses untuk superkomputer yang disponsori oleh NSF
+
+- Pada 1 Januari 1983, **TCP/IP** resmi diluncurkan dan menggantikan protokol **NCP** dari **ARPAnet.**
+
+### 1.7.4 : The Internet Explosion: The 1990s
+
+- Pada era 1990an, terjadi banyak kejadian yang menandakan perkembangan internet yang terus berlanjut dan *komersialisasi* internet.
+
+- Pada era ini, nenek moyang internet (**ARPAnet**) resmi pensiun (berhenti).
+
+- Pada era ini juga, **World Wide Web (WWW)** diciptakan. Sebuah platform untuk mewadahi sebuah aplikasi agar bisa berjalan di internet.
+Contohnya :
+	- Search engine : Google, yahoo
+	- E-commerce : Amazon, e-bay
+	- Social Media : Facebook, Instagram
+	- dll
+
+- **WWW** diciptakan oleh Tim Berners-Lee antara tahun 1989 dan 1991. Berners-Lee dan rekan-rekannya mengembangkan **HTML, HTTP, web server, dan browser**, 4 kunci utama dari sebuah web.
+
+- Para peneliti juga mengembangkan sebuah **Graphical User Interface (GUI)** web browser untuk memudahkan penggunanya mengakses web. Salah satunya adalah perusahaan Mosaic Communications (kemudian menjadi Netscape Communications) yang dibentuk oleh Marc Andreessen dan Jim Clark.
+
+- Pada tahun 1996, Microsoft membuat web browser untuk menyaingi Netscape.
+
+- Pada pertengahan hingga akhir dekade ini, muncul banyak sekali inovasi di internet.
+  - E-mail
+  - Web
+  - Instant Messaging
+  - Peer-to-peer file sharing of Mp3
+
+### 1.7.5 : The New Millennium
+
+- Pada abad 21, internet telah menjadi hal yang tak terpisahkan. Teknologi ini telah mengubah masyarakat (positif dan negatif).
+
+- Perkembangan internet tidak pernah berhenti :
+  - Akses internet menuju rumah : Cable, FTTH, 5G
+  - Internet kecepatan tinggi yang mudah diakses di mana-mana : WiFi bandara, cafe, tempat umum
+  - Social Media : Facebook, Twitter, Instagram, WhatsApp
+  - Content provider (Google) : menyediakan akses web secara instan
+  - Teknologi "cloud" : menyediakan layanan untuk menjalankan aplikasi berbasis web dengan peforma tinggi.
