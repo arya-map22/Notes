@@ -88,6 +88,8 @@
 		- [1.7.3 : A Proliferation of Networks: 1980–1990](#173--a-proliferation-of-networks-19801990)
 		- [1.7.4 : The Internet Explosion: The 1990s](#174--the-internet-explosion-the-1990s)
 		- [1.7.5 : The New Millennium](#175--the-new-millennium)
+- [Chapter 2 : Application Layer](#chapter-2--application-layer)
+	- [2.1 : Principles of Network Applications](#21--principles-of-network-applications)
 
 ---
 
@@ -965,3 +967,8 @@ Contohnya :
   - Social Media : Facebook, Twitter, Instagram, WhatsApp
   - Content provider (Google) : menyediakan akses web secara instan
   - Teknologi "cloud" : menyediakan layanan untuk menjalankan aplikasi berbasis web dengan peforma tinggi.
+
+# Chapter 2 : Application Layer
+
+## 2.1 : Principles of Network Applications
+
